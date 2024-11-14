@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>.</title>
+  </head>
+  <body>
+    <h1></h1>
+    <p>Welcome to my dungeon</p>
+  </body>
+  
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input onclick="a()" type="submit" value="Submit">
+</form>
+</html>
+
+<button onclick ="myFunction()">Try Javascript</button>
+<p id="output_here"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("forml");
+  var text = "";
+  var i;
+  for (i = 0; i < x.length ;i++){
+    data = x.elements[i].value;
+    if (data!="submit") {
+      text += "Your name was entered as " + data + ".";
+    }
+  }
+  document.getElementById("output_here").innterHTML = text;
+}
+function a(){
+    window.location.href = "homepage.html"
+}
+</script>  
